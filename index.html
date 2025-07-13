@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<button id="btn-top" title="Subir">↑</button>
+<body>
+    <!-- Header y navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="https://zianok.github.io/LinkTree/">LinkTree</a></li>
+                <button id="theme-toggle">🌙</button>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1><span id="typing"></span><span class="typing__cursor">|</span></h1>
+            <p>Constante aprendiz de la tecnología.</p>
+            <a href="#contacto" class="btn">Contáctame</a>
+            <div class="socials">
+                <a href="https://github.com/ZianoK?tab=repositories">GitHub</a> — <a
+                    href="https://www.linkedin.com/in/tiziano-cristiani-320b03248/">LinkedIn</a> — <a
+                    href="https://www.instagram.com/tizocristiani/">Intagram</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="img/mi-foto.jpg" alt="Foto de [Tu Nombre]">
+        </div>
+    </section>
+
+    <!-- Secciones principales -->
+    <main>
+        <section id="inicio">
+            <h1>¡Bienvenido a mi Portfolio!</h1>
+            <p>Haras un recorrido por mi experiencia en la era de la Informática, veras algunos proyectos de paginas
+                web, un poco sobre mí, mis habilidades y podras contactarme por alguna duda que te surga.</p>
+        </section>
+
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>Mi nombre es <b>Tiziano Cristiani</b>, tengo 22 años y soy estudiante de Ingenieria Informática. <br> Me
+                apasiona tener el poder de crear lo que imagine, de poder darle vida a los proyectos de cualquier
+                persona, agregando la nueva era de la inteligencia artificial para automatizar procesos y aumentar la
+                eficacia y productividad.</p>
+        </section>
+
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <section id="ventana">
+                <iframe src="https://zianok.github.io/BlogPersonal/" width="100%" height="600" frameborder="0"
+                    scrolling="auto" allowfullscreen></iframe>
+            </section>
+
+            <section id="ventana">
+                <iframe src="https://zianok.github.io/IdentyKit/" width="100%" height="600" frameborder="0"
+                    scrolling="auto" allowfullscreen></iframe>
+            </section>
+
+        </section>
+
+        <section id="habilidades">
+            <h2>Habilidades / CV</h2>
+            <h3>Actualmente trabajando como soporte en infraestructura en Allaria.</h3>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Docker</li>
+                <li>n8n</li>
+                <li>SQL</li>
+                <li>React</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>NodeJS</li>
+                <li>Huawei Cloud</li>
+            </ul>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form id="form-contacto">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <!-- Redes sociales -->
+            <div class="footer-socials">
+                <a href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/ZianoK?tab=repositories" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://zianok.github.io/LinkTree/" target="_blank" rel="noopener">Más.</a>
+            </div>
+
+            <!-- Copyright y créditos -->
+            <div class="footer-credits">
+                <p>© <span id="current-year"></span> <span class="bold">Tiziano Cristiani</span>. Diseñado &amp; desarrollado por mí.</p>
+                <p>Créditos: íconos por <a href="https://iconscout.com" target="_blank" rel="noopener">IconScout</a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

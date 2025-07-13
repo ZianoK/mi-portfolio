@@ -1,0 +1,408 @@
+:root {
+    --bg-dark: #0d0d0d;
+    --grad-start: #081c15;
+    --grad-end: #045d56;
+    --accent: #16db93;
+    --text-light: #ffffff;
+    --text-muted: #c5f3e5;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 0 2rem;
+    background: linear-gradient(135deg,
+            var(--grad-start),
+            var(--grad-end));
+    color: var(--text-light);
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.hero-content .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--bg-dark);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.hero-content .btn:hover {
+    opacity: 0.8;
+}
+
+.hero-content .socials {
+    margin-top: 1rem;
+}
+
+.hero-content .socials a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+}
+
+.hero-image {
+    max-width: 40%;
+}
+
+.hero-image img {
+    object-fit: cover;
+    clip-path: inset(130px 20px 130px 20px);
+    -webkit-clip-path: inset(130px 20px 130px 20px);
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero-image:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .hero-content,
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* ————————————————————————————————————————
+   RESET BÁSICO + TIPOGRAFÍA GLOBAL
+———————————————————————————————————————— */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--bg-dark);
+    background: #fff;
+}
+
+/* ————————————————————————————————————————
+   HEADER & NAVEGACIÓN
+———————————————————————————————————————— */
+header {
+    position: fixed;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--bg-dark);
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+/* para dejar espacio debajo del header fijo */
+main {
+    padding-top: 80px;
+}
+
+/* ————————————————————————————————————————
+   SECCIONES PRINCIPALES
+———————————————————————————————————————— */
+section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--grad-end);
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--grad-end);
+}
+
+section h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+#inicio p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Sobre Mí */
+#sobre-mi p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Proyectos: tarjetas */
+#proyectos .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+#proyectos .project-card {
+    background: #f9f9f9;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+#proyectos .project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    display: block;
+}
+
+.project-card .card-content {
+    padding: 1rem;
+}
+
+.project-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Habilidades/CV */
+#habilidades ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    list-style: none;
+}
+
+#habilidades li {
+    background: var(--grad-start);
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Contacto */
+#contacto form {
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contacto label {
+    font-weight: 500;
+}
+
+#contacto input,
+#contacto textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+#contacto button {
+    width: max-content;
+    background: var(--grad-end);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#contacto button:hover {
+    opacity: 0.8;
+}
+
+/* ————————————————————————————————————————
+   FOOTER
+———————————————————————————————————————— */
+footer {
+    background: #f2f2f2;
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+footer a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ————————————————————————————————————————
+   MEDIA QUERIES RESPONSIVE
+———————————————————————————————————————— */
+@media (max-width: 992px) {
+    nav {
+        justify-content: center;
+    }
+
+    #proyectos .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    nav ul {
+        gap: 1rem;
+    }
+
+    section {
+        margin: 3rem auto;
+        padding: 0 1rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+}
+
+
+/* ————————————————————————————————————————
+   COSITAS CON JAVASCRIPT
+———————————————————————————————————————— */
+
+#btn-top {
+  position: fixed;
+  bottom: 2rem; right: 2rem;
+  display: none;
+  background: var(--accent);
+  color: var(--bg-dark);
+  border: none;
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 1000;
+}
+
+/* Variables para tema claro */
+:root {
+  --bg: #fff; --fg: #222;
+}
+/* Variables para tema oscuro */
+[data-theme="dark"] {
+  --bg: #111; --fg: #eee;
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* cursor parpadeante */
+.typing__cursor {
+  display: inline-block;
+  width: 0;
+  margin-left: 2px;
+  /* parpadeo */
+  animation: blink 0.7s steps(1) infinite;
+  vertical-align: bottom;
+  background: transparent;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
