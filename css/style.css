@@ -334,30 +334,81 @@ footer a:hover {
 /* ————————————————————————————————————————
    MEDIA QUERIES RESPONSIVE
 ———————————————————————————————————————— */
+
+/* Pantallas intermedias */
+@media (max-width: 1200px) {
+  section {
+    padding: 0 1.5rem;
+  }
+}
+
+/* Notebooks / pantallas medianas */
 @media (max-width: 992px) {
-    nav {
-        justify-content: center;
-    }
-
-    #proyectos .grid {
-        grid-template-columns: 1fr;
-    }
+  nav {
+    padding: 1rem;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #proyectos .grid {
+    grid-template-columns: 1fr;
+  }
 }
 
+/* Tablets / móviles grandes */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 1rem;
+  }
+  .hero-content,
+  .hero-image {
+    max-width: 100%;
+  }
+  .hero-image {
+    margin-bottom: 2rem;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  iframe {
+    height: 400px;
+  }
+}
+
+/* Móviles */
 @media (max-width: 576px) {
-    nav ul {
-        gap: 1rem;
-    }
-
-    section {
-        margin: 3rem auto;
-        padding: 0 1rem;
-    }
-
-    section h2 {
-        font-size: 2rem;
-    }
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  section {
+    margin: 3rem 0;
+    padding: 0 1rem;
+  }
+  section h2 {
+    font-size: 2rem;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+  #btn-top {
+    bottom: 1rem;
+    right: 1rem;
+  }
+  #contacto form {
+    padding: 0 1rem;
+  }
 }
+
 
 
 /* ————————————————————————————————————————
